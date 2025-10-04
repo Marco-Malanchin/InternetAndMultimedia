@@ -1,17 +1,8 @@
-%completa
-function [outputArg1,outputArg2] = untitled4(inputArg1,inputArg2)
-%UNTITLED4 Summary of this function goes here
-%   Detailed explanation goes here
-arguments (Input)
-    inputArg1
-    inputArg2
-end
-
-arguments (Output)
-    outputArg1
-    outputArg2
-end
-
-outputArg1 = inputArg1;
-outputArg2 = inputArg2;
+function sommaelementi = addnumbers(m)
+[l,r] = size(m);
+sommaelementi = 0;
+for i = 1 : l
+    for j = 1 : r
+        sommaelementi = sommaelementi + m(i,j);
+    end
 end

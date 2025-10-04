@@ -1,0 +1,8 @@
+function addendi = sumthreshold(n);
+counter = 0;
+sum = 0;
+while sum < n
+    counter = counter + 1;
+    sum = sum + rand(1);
+end
+addendi = counter;

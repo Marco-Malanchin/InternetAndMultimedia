@@ -1,8 +1,7 @@
-%completa
-function b = even(n);
+function b = even(n)
 r = mod(n,2);
-IF r == 0
-    b = 1
-ELSE 
-    b = 0
-END
+if r == 0
+    b = 1;
+else 
+    b = 0;
+end

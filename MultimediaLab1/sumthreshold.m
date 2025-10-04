@@ -1,17 +1,8 @@
-%completa
-function [outputArg1,outputArg2] = untitled5(inputArg1,inputArg2)
-%UNTITLED5 Summary of this function goes here
-%   Detailed explanation goes here
-arguments (Input)
-    inputArg1
-    inputArg2
+function addendi = sumthreshold(n)
+counter = 0;
+sum = 0;
+while sum < n
+    counter = counter + 1;
+    sum = sum + rand(1);%rand genere valori casuali compresi tra 0 e 1, con rand possiamo anche generare matrici es rand(3,2)
 end
-
-arguments (Output)
-    outputArg1
-    outputArg2
-end
-
-outputArg1 = inputArg1;
-outputArg2 = inputArg2;
-end
+addendi = counter;
