@@ -1,9 +1,8 @@
 function s = PotImg(C,Low,High,gamma)
 [a,b] = size(C);
-n = 1;
 for i = 1 : a
     for j = 1 : b
-        C(i,j) = (C(i,j))*c;
+        C(i,j) = (C(i,j)^gamma)*n;
         if C(i,j) > High
             C(i,j) = High;
         elseif C(i,j) < Low
