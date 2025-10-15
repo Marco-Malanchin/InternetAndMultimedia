@@ -33,6 +33,12 @@ x = imtran(D, "pot");
 imshow(x, []);
 figure;
 k = DecBinaria(C);
+figure;
+tom = imhist(B);
+bar(tom);
+figure;
+mm = imhist(s);
+bar(mm);
 
 
 
