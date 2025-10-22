@@ -1,0 +1,41 @@
+% Read the Luna image and diplay it
+f = imread("Luna.jpeg");
+imshow(f, []);
+figure;
+% Create a laplacian kernel (by using fspecial) and apply it to the image Luna by using the function imfilter
+la = fspecial("laplacian");
+fla = imfilter(f, la);
+imshow(fla, []);
+
+% Visualize the result and (if needed) scale (=normalize it) it to make it visible
+
+% Perform the previous operations using the kernel obtained from
+% g(𝑥,𝑦)=𝑓(𝑥,𝑦)+𝑐[𝛻^2 (𝑥,𝑦)] (check the laplacian in the slides)
+g = [0 -1 0; -1 5 -1; 0 -1 0 ];
+
+% Read the image Baboon and display it
+
+% The image is in color, take only the R component or convert it to
+% grayscale (does this operation return the same result?)
+
+% Extract the image edges using the Prewitt operator with the function edge
+
+% Extract the image edges using the Sobel filter
+
+% Extract the image edges using the Canny filter
+
+% Display using subplot the three filtered versions of Baboon that you created
+%with the Prewitt, Sobel and Canny filter
+
+% Create a noisy image by adding salt-and-pepper noise using the imnoise function 
+
+% Extract the image edges using the Prewitt operator with the function edge. Does the performance of the filter change?
+
+% Try varying the threshold value of the function edge
+
+% Extract the edges from the noisy image using the Sobel filter
+
+% Extract the edges from the noisy image using the Canny filter
+
+% Display using subplot the three filtered versions of Baboon that you created
+%with the Prewitt, Sobel and Canny filter
