@@ -1,0 +1,21 @@
+f = imread("barbara.jpg");
+F=fft2(f);
+S=fftshift(log(1+abs(F)));
+S=gscale(S);
+imshow(S,[]);
+figure;
+%Generate a Sobel filter with the function fspecial
+h=fspecial('sobel');
+%that in the frequency domain is
+H1=freqz2(h,m,n); 
+%Let’s perform the same filtering in the spatial and in the frequency domain. Then,
+%compare the results.
+%In the spatial domain
+gs=imfilter(double(f),h);
+%In the frequency domain
+gf=dftfilt(f,H1);
+%Compare the results
+imshow(gs,[]);
+figure;
+imshow(gf,[]);
+%Compare the absolute values of the filtered images
