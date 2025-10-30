@@ -1,0 +1,28 @@
+f = imread("barbara.jpg"); %leggo l'immagine
+F = fft2(f); %faccio la trasformata usando la fft
+S = abs(F); %prendo il modulo della trasformata e lo mostro
+S=log(1+abs(S)); %logaritmo comprime i valori molto grandi e amplifica quelli piccoli, rendendo visibile l'intero spettro.
+imshow(S,[]); %mostro l'immagine
+
+Fc = fftshift(F); %centro lo spettro, la fft non lo fa in automatico, metto al centro le basse frequenze
+figure;
+imshow(abs(Fc),[]);
+
+S2=log(1+abs(Fc));%come prima comprimo i valori con il logaritmo per rendere visibile tutto lo spettro
+figure;
+imshow(S2,[]);
+figure;
+
+lowPass = F;
+[a,b] = size(lowPass);
+dist = distmatrix(a,b);
+for i = 1 : a
+    for j = 1 : b
+        if dist(i,j) < 35
+            lowPass(i,j) = 1;
+        end
+    end
+end
+imshow(lowPass, []);
+filtred = F .* lowPass;
+
