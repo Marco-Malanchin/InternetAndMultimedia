@@ -87,16 +87,18 @@ imshow(m3, []);
 title('3x3 median filter');
 figure;
 % Remove the noise with an average filter
-av = fspecial("average", [7,7]);%filtro avarage 7x7
-e = imfilter(no, av);%filtro immagine
+av = fspecial("average", [7,7]); %filtro avarage 7x7
+e = imfilter(no, av); %filtro l'immagine
 
 % Display the result of the denoising by using the median and the gaussian filter 
 subplot(1,2,1);      % 1 riga, 2 colonne, prima posizione
-imshow(e, []);
+imshow(b, []);
 title('Average filter');
 subplot(1,2,2);      % 1 riga, 2 colonne, seconda posizione
-imshow(m1, []);
-title('median filter');
+imshow(d, []);
+title('Gaussian filter');
+figure;
+
 % Do you notice any difference? Try modifying the filter sizes and the
 % noise quantity
-%avarage filter funziona meglio
+%gaussiano funziona meglio
