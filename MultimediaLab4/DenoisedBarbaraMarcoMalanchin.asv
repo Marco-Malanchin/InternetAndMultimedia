@@ -6,7 +6,7 @@ figure;
 F = fft2(f);%faccio la trasformata
 [a,b] = size(F);%prendo le dimensioni dell'immagine della trasformata
 dist = distmatrix(a,b);%usando la funzione dist, calcolo la distanza di ogni pixel dal centro dell'immagine
-sigma1 = 30; %provo diversi sigma per valutare il risultato migliore
+sigma1 = 30;
 sigma2 = 20;
 sigma3 = 40;
 sigma4 = 50;

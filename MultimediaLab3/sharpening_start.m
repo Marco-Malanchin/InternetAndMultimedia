@@ -80,4 +80,3 @@ title('Sobel filter');
 subplot(1,3,3);      % 1 riga, 3 colonne, terza posizione
 imshow(CaN, []); %il peggiore, con il rumore fa ancora più confusione, mentre gli altri riconoscono i bordi tranquillamente  
 title('Canny filter');
-figure;
