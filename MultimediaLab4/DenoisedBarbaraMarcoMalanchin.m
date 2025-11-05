@@ -1,6 +1,9 @@
 f = imread("BarbaraNoise.bmp");%é una immagine con rumore salt and pepper, il miglior modo di togliere il rumore è un filtro mediano
+imshow(f,[]);
+figure;
 m = medfilt2(f, [5, 5]); %applico il filtro mediano
 imshow(m, []);
+imwrite(m,'DenoisedBarbara-MarcoMalanchin.jpg')
 figure;
 %provo un altro metodo
 F = fft2(f);%faccio la trasformata
@@ -12,7 +15,7 @@ sigma3 = 40;
 sigma4 = 50;
 sigma5 = 60;
 sigma6 = 70;
-H_gau=exp(-(dist.^2)/(2*(sigma^2)));
+H_gau=exp(-(dist.^2)/(2*(sigma5^2)));
 GaussianFiltered = F .* H_gau;
 img_rec_gau = real(ifft2(GaussianFiltered));
 imshow(img_rec_gau, []);
