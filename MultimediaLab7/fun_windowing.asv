@@ -1,8 +1,14 @@
 function [W] = fun_windowing(y,windowshape,step)
 [a, b] = size(y);
-M = windowshape(0);
+M = windowshape(1);
 rect = ones(M,1);
 k = ceil(a/step);
-for i = 1
+W(M,k);
+startS = 1;
+endS = startS + step
+for i = 1:k
+    W(:i) = y[Starts]
+    
+
 
 
