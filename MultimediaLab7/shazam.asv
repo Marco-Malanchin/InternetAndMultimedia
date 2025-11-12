@@ -1,0 +1,11 @@
+[y,Fs] = audioread("music_wav_short_moodle/gravity2.wav");
+sound(y,Fs);
+clear sound;
+load("handel.mat");
+filename = 'handel.wav';
+audiowrite(filename,y,Fs);
+%per questo audio la Fs e' 8192
+
+
+
+
