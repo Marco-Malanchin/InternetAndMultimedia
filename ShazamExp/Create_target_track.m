@@ -10,9 +10,9 @@ clear all
 % INPUT parameters
 % -----------------
 % Path of the source audio library
-pathprefixLIBRARY = '../music_wav_short/';
+pathprefixLIBRARY = 'music_wav_short/';
 % Path of the target audio library
-pathprefixTEST = '../music_wav_test/';
+pathprefixTEST = 'music_wav_test/';
 % Time duration of the target audio clips
 Duration = 2.5; % seconds
 % noise power = signal_power*noisefactor
